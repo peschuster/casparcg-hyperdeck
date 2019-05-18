@@ -1,0 +1,6 @@
+[submodule "libs/node-osc"]
+	path = libs/node-osc
+	url = git@github.com:peschuster/node-osc.git
+[submodule "libs/casparcg-connection"]
+	path = libs/casparcg-connection
+	url = git@github.com:peschuster/casparcg-connection.git
