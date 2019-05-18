@@ -3,8 +3,8 @@
 import * as csvParser from "csv-parse";
 import * as fs from "fs";
 
-import {CasparCG, Command} from "casparcg-connection";
-import {Server} from "node-osc";
+import {CasparCG, Command} from "../libs/casparcg-connection/dist";
+import {Server} from "../libs/node-osc/lib";
 import { STATES, VIDEO_FORMATS } from "./hyperdeck-server/constants";
 import hyperdeck, { THyperdeckContext } from "./hyperdeck-server/server";
 import { IServerAdapter, TClip } from "./hyperdeck-server/types";

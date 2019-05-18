@@ -20,8 +20,6 @@
     "pkg": "^4.4.0"
   },
   "dependencies": {
-    "casparcg-connection": "^4.7.0",
-    "csv-parse": "^4.4.1",
-    "node-osc": "^4.1.0"
+    "csv-parse": "^4.4.1"
   }
 }
