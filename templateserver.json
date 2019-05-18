@@ -1,0 +1,11 @@
+{
+    "localHost": "10.198.9.72",
+    "localHyperdeckPort": 9993,
+    "casparHost": "localhost",
+    "casparPort": 5250,
+    "oscLocalPort": 6250,
+    "casparChannel": 1,
+    "casparLayer": 20,
+    "casparFlashLayer": 1,
+    "csvPath": "YK19_LowerThirds.csv"
+}

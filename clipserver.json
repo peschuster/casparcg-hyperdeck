@@ -1,0 +1,11 @@
+{
+    "localHost": "10.198.9.71",
+    "localHyperdeckPort": 9993,
+    "casparHost": "localhost",
+    "casparPort": 5250,
+    "oscLocalPort": 6250,
+    "casparChannel": 1,
+    "casparLayer": 10,
+    "enableLoad": true,
+    "foreground": true
+}
