@@ -12,6 +12,24 @@ import { IServerAdapter, TClip } from "./hyperdeck-server/types";
 const TEMPLATE_LENGTH = 10 * 60;
 const TEMPLATE_FRAME_RATE = 50;
 
+function sanitizeName(input: string): string {
+    if (!input) {
+        return "";
+    }
+
+    let name = input
+        .replace(/ä/g, "ae")
+        .replace(/ö/g, "oe")
+        .replace(/ü/g, "ue")
+        .replace(/Ä/g, "Ae")
+        .replace(/Ö/g, "Oe")
+        .replace(/Ü/g, "Ue")
+        .replace(/ß/g, "ss");
+
+    name = name.replace(/[^\x00-\x7F]/g, "_");
+    return name;
+}
+
 class TTemplate extends TClip {
     public template: string;
     public params: string[];
@@ -19,7 +37,7 @@ class TTemplate extends TClip {
     constructor(id: number, template: string, params: string[]) {
         super(
             id,
-            params ? params[0] : "",
+            params ? sanitizeName(params[0]) : "",
             TEMPLATE_LENGTH * TEMPLATE_FRAME_RATE,
             TEMPLATE_FRAME_RATE);
 
