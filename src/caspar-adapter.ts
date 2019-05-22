@@ -240,10 +240,10 @@ export class TClipServer {
           const newClips: TClip[] = [];
 
           const length = cmd.response.data.length;
-          for (let i = 0; i < length; i++) {
-            const item = cmd.response.data[i];
+          let id = 1;
+          for (const item of cmd.response.data) {
             if (item.type === "video") {
-                const obj = new TClip(i + 1, item.name, item.frames, item.frameRate);
+                const obj = new TClip(id++, item.name, item.frames, item.frameRate);
                 newClips.push(obj);
             }
           }
