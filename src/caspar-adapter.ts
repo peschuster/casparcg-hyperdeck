@@ -120,12 +120,12 @@ class CasparAdapter implements IServerAdapter {
     private loadClip(clip: TClip): void {
         if (this.enableLoad) {
             if (this.foreground) {
-                this.caspar.load(this.channel, this.layer, clip.name, this.loop)
+                this.caspar.load(this.channel, this.layer, clip.name, false) // loop always false
                     .then((cmd) => {
                         this.currentClip = clip;
                     }, (err) => console.error(err));
             } else {
-                this.caspar.loadbg(this.channel, this.layer, clip.name, this.loop)
+                this.caspar.loadbg(this.channel, this.layer, clip.name, false) // loop always false
                     .then((cmd) => {
                         this.currentClip = clip;
                     }, (err) => console.error(err));
