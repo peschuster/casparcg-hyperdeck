@@ -1,9 +1,9 @@
 # casparcg-hyperdeck
 Hyperdeck "interface" for CasparCG to enable integration in BMD ATEM switchers.
 
-This is project abstract certain features of CasparCG inside an interface following the BMD Hyperdeck protocol specification.
+This project abstracts certain features of CasparCG inside an interface following the BMD Hyperdeck protocol specification.
 
-Therefore CasparCG can be controlled from within in BMD ATEM video switcher.
+Therefore CasparCG can be controlled from within an BMD ATEM video switcher.
 
 ## Notes
 
