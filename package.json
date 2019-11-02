@@ -20,7 +20,7 @@
     "pkg": "^4.4.0"
   },
   "dependencies": {
-    "csv-parse": "^4.4.5",
+    "csv-parse": "^4.4.6",
     "typescript": "^3.7.4"
   }
 }
