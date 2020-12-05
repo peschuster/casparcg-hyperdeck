@@ -34,15 +34,16 @@ jobs:
           # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
           node-version: 12.x # optional
       
-      - name: Submodules npm
-        run: |
-          npm install libs/casparcg-connection/
-          npm install libs/node-osc/
-    
-      - name: Build submodules
+      - name: Init node-osc
+        working-directory: libs/node-osc
+        run: npm install
+      
+      - name: Init and build casparcg-connection
         working-directory: libs/casparcg-connection
-        run: npm run build:main
-    
+        run: |
+          npm install
+          npm run build:main
+        
       - name: Build executables
         run: npm run build-win32
       
