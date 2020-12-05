@@ -35,11 +35,13 @@ jobs:
           node-version: 12.x # optional
       
       - name: Submodules npm
-        run: npm install libs/casparcg-connection/ && npm install libs/node-osc/
+        run: |
+          npm install libs/casparcg-connection/
+          npm install libs/node-osc/
     
       - name: Build submodules
         working-directory: libs/casparcg-connection
-        run: npm run build
+        run: npm run build:main
     
       - name: Build executables
         run: npm run build-win32
