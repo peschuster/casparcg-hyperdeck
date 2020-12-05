@@ -13,7 +13,8 @@ Currently there are two applications:
 
 ## Building
 
-1. Checkout all submodules (`git clone https://github.com/peschuster/casparcg-hyperdeck.git --recursive`)
-2. Run `npm install` inside the submodules (`libs/node-osc` and `libs/casparcg-connection`)
-3. Run `npm run build` inside `libs/casparcg-connection`
-4. Execute `npm run build-win32` to create two `.exe` files for the two applications.
+1. Checkout all submodules (`git submodule update`)
+2. Change to `libs/node-osc` and run `npm install`
+3. Change to `libs/casparcg-connection` and run `npm install` and `npm run build:main`
+4. Change back to base directory of the project and run `npm install`
+5. Run `npm run build-win32` to create two `.exe` files for the two applications (in `bin/`)
