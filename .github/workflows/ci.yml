@@ -45,7 +45,9 @@ jobs:
           npm run build:main
         
       - name: Build executables
-        run: npm run build-win32
+        run: |
+          npm install
+          npm run build-win32
       
       - uses: actions/upload-artifact@v2
         with:
